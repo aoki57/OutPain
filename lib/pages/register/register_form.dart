@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/get_instance.dart';
 import 'package:tubes/auth/controller/register_controller.dart';
-import 'package:tubes/model/user_model.dart';
 
 class RegisterForm extends StatelessWidget {
   const RegisterForm({
@@ -21,7 +20,7 @@ class RegisterForm extends StatelessWidget {
         child: Column(
           children: [
             TextField(
-              controller: controller.fullName,
+              controller: controller.username,
               decoration: InputDecoration(
                 label: Text('Fullname'),
                 prefixIcon: Icon(Icons.person_outline_rounded),
@@ -43,7 +42,6 @@ class RegisterForm extends StatelessWidget {
               height: 10,
             ),
             TextField(
-              obscureText: true,
               controller: controller.password,
               decoration: InputDecoration(
                 label: Text('Password'),
@@ -60,19 +58,10 @@ class RegisterForm extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  // if (_formkey.currentState!.validate()) {
-                  //   RegisterController.instance.registerUser(
-                  //       controller.email.text.trim(),
-                  //       controller.password.text.trim());
-                  // }
-
                   if (_formkey.currentState!.validate()) {
-                    final user = UserModel(
-                      email: controller.email.text.trim(),
-                      password: controller.password.text.trim(),
-                      fullName: controller.fullName.text.trim(),
-                    );
-                    RegisterController.instance.createUser(user);
+                    RegisterController.instance.registerUser(
+                        controller.email.text.trim(),
+                        controller.password.text.trim());
                   }
                 },
                 child: Text('Register'.toUpperCase()),

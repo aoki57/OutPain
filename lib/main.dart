@@ -5,12 +5,6 @@ import 'package:get/get_instance/get_instance.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:tubes/auth/auth_repository/auth_repository.dart';
 import 'package:tubes/firebase_options.dart';
-import 'package:tubes/pages/edit_profile.dart';
-import 'package:tubes/pages/login/login.dart';
-import 'package:tubes/pages/register/register.dart';
-import 'package:tubes/pages/splash_screen.dart';
-import 'package:tubes/pages/welcome.dart';
-import 'package:tubes/widgets/nav.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -38,14 +32,6 @@ class MyApp extends StatelessWidget {
         useMaterial3: false,
       ),
       home: const CircularProgressIndicator(),
-      // initialRoute: '/',
-      // routes: {
-      //   '/': (context) => Splash(),
-      //   '/welcome': (context) => Welcome(),
-      //   '/login': (context) => Login(),
-      //   '/register': (context) => Register(),
-      //   '/nav': (context) => Navigation(),
-      // },
     );
   }
 }

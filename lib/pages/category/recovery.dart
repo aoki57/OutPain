@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:tubes/pages/nyeri_kaki.dart';
-import 'package:tubes/pages/nyeri_leher.dart';
-import 'package:tubes/pages/nyeri_punggung.dart';
-import 'package:tubes/pages/nyeri_tangan.dart';
-import 'package:tubes/widgets/nyeri.dart';
+import 'package:tubes/pages/category/nyeri_kaki.dart';
+import 'package:tubes/pages/category/nyeri_leher.dart';
+import 'package:tubes/pages/category/nyeri_punggung.dart';
+import 'package:tubes/pages/category/nyeri_tangan.dart';
 
 class Recovery extends StatelessWidget {
   const Recovery({super.key});
@@ -14,7 +13,7 @@ class Recovery extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Recovery"),
+        title: Text("Pemulihan"),
         centerTitle: true,
       ),
       backgroundColor: Colors.grey.shade100,

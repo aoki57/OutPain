@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:tubes/pages/nyeri_kaki.dart';
-import 'package:tubes/pages/nyeri_leher.dart';
-import 'package:tubes/pages/nyeri_punggung.dart';
-import 'package:tubes/pages/nyeri_tangan.dart';
+import 'package:tubes/pages/category/nyeri_kaki.dart';
+import 'package:tubes/pages/category/nyeri_punggung.dart';
+import 'package:tubes/pages/category/nyeri_tangan.dart';
+import 'package:tubes/pages/nyeri_akut.dart';
 
 class Nyeri extends StatelessWidget {
   const Nyeri({
@@ -33,31 +33,31 @@ class Nyeri extends StatelessWidget {
             child: Row(
               children: [
                 InkWell(
-                  onTap: () => Get.to(() => const NyeriLeher()),
+                  onTap: () => Get.to(() => const NyeriAkut()),
                   child: NyeriItem(
                     image: 'assets/image/nyeri1.jpg',
-                    title: 'Nyeri Leher',
+                    title: 'Nyeri Akut',
                   ),
                 ),
                 InkWell(
                   onTap: () => Get.to(() => const NyeriTangan()),
                   child: NyeriItem(
                     image: 'assets/image/nyeri2.jpg',
-                    title: 'Nyeri Tangan',
+                    title: 'Nyeri Kronis',
                   ),
                 ),
                 InkWell(
                   onTap: () => Get.to(() => const NyeriKaki()),
                   child: NyeriItem(
                     image: 'assets/image/nyeri3.jpg',
-                    title: 'Nyeri Kaki',
+                    title: 'Nyeri Nosiseptif',
                   ),
                 ),
                 InkWell(
                   onTap: () => Get.to(() => const NyeriPunggung()),
                   child: NyeriItem(
                     image: 'assets/image/nyeri4.png',
-                    title: 'Nyeri Punggug',
+                    title: 'Nyeri Neurogenik',
                   ),
                 ),
               ],

@@ -21,16 +21,9 @@ class LoginForm extends StatelessWidget {
           children: [
             TextFormField(
               controller: controller.email,
-              // validator: (value) {
-              //   if (value == null || value.isEmpty) {
-              //     return 'Masukkan email Anda';
-              //   }
-              //   return null;
-              // },
               decoration: InputDecoration(
                 prefixIcon: Icon(Icons.person_outline_outlined),
                 labelText: 'Email',
-                // hintText: 'email',
                 border: OutlineInputBorder(),
               ),
             ),
@@ -43,7 +36,6 @@ class LoginForm extends StatelessWidget {
               decoration: InputDecoration(
                 prefixIcon: Icon(Icons.lock_outlined),
                 labelText: 'Password',
-                // hintText: 'Password',
                 border: OutlineInputBorder(),
                 suffixIcon: IconButton(
                     onPressed: () {}, icon: Icon(Icons.remove_red_eye_sharp)),
@@ -69,7 +61,6 @@ class LoginForm extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  // Navigator.pushNamed(context, '/nav');
                   if (_formkey.currentState!.validate()) {
                     controller.loginUser(
                       controller.email.text.trim(),

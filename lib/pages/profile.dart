@@ -18,23 +18,8 @@ class _ProfileState extends State<Profile> {
     return Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
-        // leading: IconButton(
-        //     onPressed: () {},
-        //     icon: Icon(
-        //       Icons.arrow_back,
-        //     )),
         title: Text("Profile"),
         centerTitle: true,
-        actions: [
-          Container(
-            margin: EdgeInsets.only(right: 10),
-            child: IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.settings,
-                )),
-          )
-        ],
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -110,12 +95,12 @@ class _ProfileState extends State<Profile> {
                 ),
                 ProfileMenu(
                   title: "Histori Recovery",
-                  icon: Icons.settings,
+                  icon: Icons.history,
                   onPress: () {},
                 ),
                 ProfileMenu(
                   title: "Bookmark",
-                  icon: Icons.settings,
+                  icon: Icons.bookmark,
                   onPress: () {},
                 ),
                 Divider(),

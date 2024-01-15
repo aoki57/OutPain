@@ -46,6 +46,11 @@ class NyeriTangan extends StatelessWidget {
                       image: 'assets/image/headerImage.png',
                       times: '00:30',
                     ),
+                    RecoverContent(
+                      title: 'Peregangan',
+                      image: 'assets/image/punggung1.jpg',
+                      times: '00:30',
+                    ),
                   ],
                 ),
               ),

@@ -14,6 +14,19 @@ class _NotifState extends State<Notif> {
       appBar: AppBar(
         title: Text('Notification'),
         centerTitle: true,
+        actions: [
+          Container(
+            padding: EdgeInsets.all(10),
+            width: 60,
+            height: 60,
+            child: ClipRRect(
+                borderRadius: BorderRadius.circular(100),
+                child: Image.asset(
+                  "assets/image/man.jpg",
+                  fit: BoxFit.cover,
+                )),
+          )
+        ],
       ),
       backgroundColor: Colors.grey[100],
       body: SafeArea(

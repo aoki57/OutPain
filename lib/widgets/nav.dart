@@ -34,8 +34,8 @@ class _NavigationState extends State<Navigation> {
     return Scaffold(
       body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        // showSelectedLabels: false,
-        // showUnselectedLabels: false,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
